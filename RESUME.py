@@ -56,12 +56,15 @@ def start():
 
     pdf_file = st.file_uploader("choose your CV", type=["pdf"])
     if pdf_file is not None:
-        with st.spinner("Uploading your CV ..."):
-            time.sleep(4)
-        save_image_path = "./Resume/Uploaded_Resume/" + pdf_file.name
-        with open(save_image_path, "wb") as f: #"w":This is to open in write mode while "b"means open in binary mode
-            #"b" is used when working with binary files like images, PDFs
+    with st.spinner("Uploading your CV ..."):
+        time.sleep(4)
+    save_image_path = "./Resume/Uploaded_Resume/" + pdf_file.name
+    try:
+        with open(save_image_path, "wb") as f:
             f.write(pdf_file.getbuffer())
+    except Exception as e:
+        st.error(f"Error saving the PDF file: {e}")
+        return  # Exit function if an error occurs
         
             #getting data from cv
         cv_data= ResumeParser(save_image_path).get_extracted_data()
