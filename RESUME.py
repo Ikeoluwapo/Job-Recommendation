@@ -56,8 +56,8 @@ def start():
 
     pdf_file = st.file_uploader("choose your CV", type=["pdf"])
     if pdf_file is not None:
-    with st.spinner("Uploading your CV ..."):
-        time.sleep(4)
+        with st.spinner("Uploading your CV ..."):
+            time.sleep(4)
     save_image_path = "./Resume/Uploaded_Resume/" + pdf_file.name
     try:
         with open(save_image_path, "wb") as f:
