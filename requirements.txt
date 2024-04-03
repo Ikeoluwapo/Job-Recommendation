@@ -1,10 +1,16 @@
-en_core_web_sm
-pdfminer3
-pyresparser
-streamlit
-pandas
-pafy
-plotly
-pymysql
-streamlit-tags
-Pillow
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz#sha256=06c80936324012d1223291d2af41a5229e746dc2dee8fe31a532666ee3d18aaa
+GitPython==3.1.42
+importlib-metadata==7.0.1
+importlib-resources==6.1.1
+ipython==8.12.3
+nltk==3.8.1
+numpy==1.24.4
+pdfminer.six==20231228
+pdfminer3==2018.12.3.0
+pycparser==2.21
+pyresparser==1.0.6
+spacy==2.3.5
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+streamlit-tags==1.2.8
+streamlit==0.88.0
