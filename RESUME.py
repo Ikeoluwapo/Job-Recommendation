@@ -70,7 +70,7 @@ def start():
             cv_content = pdf_reader(save_image_path)
 
             st.header("CV Analysis")
-            st.success("Hello ")
+            st.success("Hello")
             
             try:
                 st.text(cv_data["mobile_number"])
