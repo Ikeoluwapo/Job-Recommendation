@@ -23,6 +23,8 @@ import pymysql
 # import pafy
 import plotly.express as px
 import nltk
+import nltk
+nltk.download('stopwords')
 
 st.set_page_config(
     page_title="AI CV Job Recommendation"
