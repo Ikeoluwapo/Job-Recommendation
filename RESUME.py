@@ -57,7 +57,7 @@ def start():
     if pdf_file is not None:
         with st.spinner("Uploading your CV ..."):
             time.sleep(4)
-        save_image_path = "./Resume/Uploaded_Resume/" + pdf_file.name
+        save_image_path = "./Resume" + pdf_file.name
         if hasattr(pdf_file, 'name'):
             with open(save_image_path, "wb") as f:
                 f.write(pdf_file.getbuffer())
