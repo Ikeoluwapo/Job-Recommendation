@@ -59,12 +59,13 @@ def start():
         with st.spinner("Uploading your CV ..."):
             time.sleep(4)
     save_image_path = "./Resume/Uploaded_Resume/" + pdf_file.name
-    try:
+    if hasattr(pdf_file, 'name'):
         with open(save_image_path, "wb") as f:
             f.write(pdf_file.getbuffer())
-    except Exception as e:
-        st.error(f"Error saving the PDF file: {e}")
-        return  # Exit function if an error occurs
+    else:
+        st.error("Uploaded file has no name attribute.")
+else:
+    st.error("No file was uploaded.")
         
             #getting data from cv
         cv_data= ResumeParser(save_image_path).get_extracted_data()
