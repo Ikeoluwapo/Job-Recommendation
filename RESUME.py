@@ -4,6 +4,10 @@ import base64, random
 import time, datetime 
 
 import spacy
+import nltk
+nltk.data.path.append("C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python38\\nltk_data")
+from nltk.corpus import stopwords
+nltk.download('stopwords')
 
 # Load the default English language model (small version)
 nlp = spacy.load('en_core_web_sm')
@@ -22,8 +26,7 @@ from PIL import Image
 import pymysql 
 # import pafy
 import plotly.express as px
-import nltk
-nltk.download('stopwords')
+
 
 st.set_page_config(
     page_title="AI CV Job Recommendation"
