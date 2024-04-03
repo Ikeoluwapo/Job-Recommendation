@@ -97,8 +97,8 @@ def start():
                     st.text("Recommended job: Data Science, Software development, Frontend development, Backend")
 
                 elif i.lower() in ["Engineering", "Construction", "Architect", "Architecture", "Building"]:
-                print(i.lower())
-                st.text("Recommended job: Architecture, Civil Engineering")
+                    print(i.lower())
+                    st.text("Recommended job: Architecture, Civil Engineering")
 
                 elif i.lower() in ["Care giving", "Health", "Bioinformatics", "Caring"]:
                     print(i.lower())
